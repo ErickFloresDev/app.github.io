@@ -32,11 +32,11 @@ function ingressTable(ingress) {
         row.innerHTML = `
             <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 block md:table-cell">
                 <div class="flex flex-col">
-                    <span>${ingress.ingress_source}</span>
+                    <span class="text-gray-300">${ingress.ingress_source}</span>
                     <span class="text-gray-500 text-xs">${date.toLocaleDateString()} - ${ingress.ingress_type}</span>
                 </div>
             </td>
-            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 md:table-cell">$${ingress.ingress_amount}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300 md:table-cell">S/ ${ingress.ingress_amount.toFixed(2)}</td>
         `;
         
         tbody.appendChild(row);

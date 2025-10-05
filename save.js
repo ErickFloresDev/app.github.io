@@ -32,11 +32,11 @@ function populateTable(saves) {
         row.innerHTML = `
             <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 block md:table-cell">
                 <div class="flex flex-col">
-                    <span>${save.save_source}</span>
+                    <span class="text-gray-300">${save.save_source}</span>
                     <span class="text-gray-500 text-xs">${date.toLocaleDateString()} - ${save.save_type}</span>
                 </div>
             </td>
-            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 md:table-cell">$${save.save_amount}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300 md:table-cell">S/ ${save.save_amount.toFixed(2)}</td>
         `;
         
         tbody.appendChild(row);

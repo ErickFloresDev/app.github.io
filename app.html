@@ -9,41 +9,53 @@
         .accordion-item {
             transition: max-height 0.2s ease;
         }
+
+        .bg-dark{
+            background-color: #000000;
+        }
+
+        .title-color{
+            color: #fff;
+        }
+
+        .text-green{
+            color: #b6ed00;
+        }
     </style>
 </head>
-<body class="bg-gray-100 p-6">
+<body class="bg-dark p-6">
 
     <div class="w-full flex flex-col md:flex-row justify-evenly ">
 
         <!-- SECCION DE RESUMEN DE CUENTA -->
-        <div class="w-full md:w-2/5">
-            <h2 class="text-xl font-semi-bolt m-2">Resumen</h2>
+        <div class="w-full md:w-1/3 py-4">
+            <h2 class="title-color text-xl font-semi-bolt m-2">Resumen</h2>
 
             <div class="accordion">
                 <!-- ACORDION DE USUARIO -->
                 <div class="accordion-item">
-                    <button class="w-full text-left p-4 bg-white border border-gray-300 rounded-lg focus:outline-none flex items-center" onclick="toggleAccordion(this)">
+                    <button class="w-full text-green bg-dark text-left p-4 border border-gray-300 rounded-lg focus:outline-none flex items-center" onclick="toggleAccordion(this)">
                         <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user mr-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg>
                         Usuario
                     </button>
                     <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
                         <div class="p-4">
-                            <label for="nombre" class="block text-sm font-medium text-gray-700">Nombres</label>
-                            <input type="text" id="nombre" value="Erick Flores" class="border border-gray-300 p-2 w-full rounded-md" />
+                            <label for="nombre" class="text-gray-300 block text-sm font-medium">Nombres</label>
+                            <input type="text" id="nombre" value="User" class="border border-gray-300 bg-dark text-gray-500 p-2 w-full rounded-md" />
 
-                            <label for="contrasena" class="block text-sm font-medium text-gray-700 mt-4">Contraseña</label>
-                            <input type="password" id="contrasena" value="******" class="border border-gray-300 p-2 w-full rounded-md" />
+                            <label for="contrasena" class="text-gray-300 block text-sm font-medium mt-4">Contraseña</label>
+                            <input type="password" id="contrasena" value="******" class="border border-gray-300 bg-dark text-gray-500 p-2 w-full rounded-md" />
 
-                            <label for="monto" class="block text-sm font-medium text-gray-700 mt-4">Meta de Ahorro S/.</label>
-                            <input type="number" id="monto" value="1000.00" class="border border-gray-300 p-2 w-full rounded-md" />
+                            <label for="monto" class="text-gray-300 block text-sm font-medium mt-4">Meta de Ahorro S/.</label>
+                            <input type="number" id="monto" value="0.00" class="border border-gray-300 bg-dark text-gray-500 p-2 w-full rounded-md" />
                         </div>
 
                     </div>
                 </div>
 
                 <!-- ACORDION DE RESULTADOS -->
-                <div class="accordion-item">
-                    <button class="w-full text-left p-4 bg-white border border-gray-300 rounded-lg focus:outline-none flex items-center" onclick="toggleAccordion(this)">
+                <div class="accordion-item mt-4">
+                    <button class="w-full text-green bg-dark text-left p-4 border border-gray-300 rounded-lg focus:outline-none flex items-center" onclick="toggleAccordion(this)">
                         <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-presentation mr-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 4l18 0" /><path d="M4 4v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-10" /><path d="M12 16l0 4" /><path d="M9 20l6 0" /><path d="M8 12l3 -3l2 2l3 -3" /></svg>
                         Resultados
                     </button>
@@ -51,33 +63,33 @@
 
                         <div class="p-4 flex space-x-4">
                             <div class="flex-1">
-                                <label for="efectivo" class="block text-sm font-medium text-gray-700">Efectivo ahora</label>
-                                <input type="number" id="efectivo" value="100.00" disabled class="border border-gray-300 bg-white p-2 w-full rounded-md" />
+                                <label for="efectivo" class="block text-sm font-medium text-gray-300">Efectivo ahora</label>
+                                <input type="number" id="efectivo" value="100.00" disabled class="border border-gray-300 bg-dark text-gray-500 p-2 w-full rounded-md" />
                             </div>
                             
                             <div class="flex-1">
-                                <label for="cuenta" class="block text-sm font-medium text-gray-700">Cuenta ahora</label>
-                                <input type="number" id="cuenta" value="800.00" disabled class="border border-gray-300 bg-white p-2 w-full rounded-md" />
+                                <label for="cuenta" class="block text-sm font-medium text-gray-300">Cuenta ahora</label>
+                                <input type="number" id="cuenta" value="800.00" disabled class="border border-gray-300 bg-dark text-gray-500 p-2 w-full rounded-md" />
                             </div>
                         </div>
 
                         <div class="px-4 pb-4 flex space-x-4">
                             <div class="flex-1">
-                                <label for="ingresos" class="block text-sm font-medium text-gray-700">Total de Ingresos</label>
-                                <input type="number" id="ingresos" value="1450.00" disabled class="border border-gray-300 bg-white p-2 w-full rounded-md" />
+                                <label for="ingresos" class="block text-sm font-medium text-gray-300">Total de Ingresos</label>
+                                <input type="number" id="ingresos" value="1450.00" disabled class="border border-gray-300 bg-dark text-gray-500 p-2 w-full rounded-md" />
                             </div>
                             
                             <div class="flex-1">
-                                <label for="gastos" class="block text-sm font-medium text-gray-700">Total de Gastos</label>
-                                <input type="number" id="gastos" value="1300.00" disabled class="border border-gray-300 bg-white p-2 w-full rounded-md" />
+                                <label for="gastos" class="block text-sm font-medium text-gray-300">Total de Gastos</label>
+                                <input type="number" id="gastos" value="1300.00" disabled class="border border-gray-300 bg-dark text-gray-500 p-2 w-full rounded-md" />
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- ACORDION META DE AHORRO -->
-                <div class="accordion-item">
-                    <button class="w-full text-left p-4 bg-white border border-gray-300 rounded-lg focus:outline-none flex items-center" onclick="toggleAccordion(this)">
+                <div class="accordion-item mt-4">
+                    <button class="w-full text-green bg-dark text-left p-4 border border-gray-300 rounded-lg focus:outline-none flex items-center" onclick="toggleAccordion(this)">
                         <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-target-arrow mr-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M12 7a5 5 0 1 0 5 5" /><path d="M13 3.055a9 9 0 1 0 7.941 7.945" /><path d="M15 6v3h3l3 -3h-3v-3z" /><path d="M15 9l-3 3" /></svg>
                         Meta
                     </button>
@@ -89,7 +101,7 @@
                                 </div>
                             </div>
                             <div class="mt-2 text-center">
-                                <span class="text-sm font-medium">Ahorro: $400 de $1000</span>
+                                <span class="text-green text-sm font-medium">Ahorro: $400 de $1000</span>
                             </div>
                         </div>
 
@@ -99,15 +111,15 @@
         </div>
 
         <!-- SECCION DE HISTORIAL -->
-        <div class="w-full md:w-2/5">
+        <div class="w-full md:w-1/3 py-4">
 
-            <h2 class="text-xl font-semi-bolt m-2">Historial</h2>
+            <h2 class="title-color text-xl font-semi-bolt m-2">Historial</h2>
 
             <div class="accordion">
 
                 <!-- ACORDION DE HISTORIAL DE AHORROS -->
                 <div class="accordion-item">
-                    <button class="w-full text-left p-4 bg-white border border-gray-300 rounded-lg focus:outline-none flex items-center" onclick="toggleAccordion(this)">
+                    <button class="w-full text-green bg-dark text-left p-4 border border-gray-300 rounded-lg focus:outline-none flex items-center" onclick="toggleAccordion(this)">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-pig mr-2">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                             <path d="M15 11v.01" />
@@ -119,13 +131,13 @@
                     <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
                         <div class="py-4">
                             <table class="min-w-full divide-y divide-gray-200">
-                                <thead class="bg-gray-50">
+                                <thead class="bg-dark">
                                     <tr>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Descripción</th>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Monto</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Descripción</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Monto</th>
                                     </tr>
                                 </thead>
-                                <tbody id="savesTableBody" class="bg-white divide-y divide-gray-200">
+                                <tbody id="savesTableBody" class="bg-dark divide-y divide-gray-200">
                                     <!-- Las filas se llenarán aquí -->
                                 </tbody>
                             </table>
@@ -135,8 +147,8 @@
                 </div>
 
                 <!-- ACORDION DE HISTORIAL DE INGRESOS -->
-                <div class="accordion-item">
-                    <button class="w-full text-left p-4 bg-white border border-gray-300 rounded-lg focus:outline-none flex items-center" onclick="toggleAccordion(this)">
+                <div class="accordion-item mt-4">
+                    <button class="w-full text-green bg-dark text-left p-4 border border-gray-300 rounded-lg focus:outline-none flex items-center" onclick="toggleAccordion(this)">
                         <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-coin mr-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M14.8 9a2 2 0 0 0 -1.8 -1h-2a2 2 0 1 0 0 4h2a2 2 0 1 1 0 4h-2a2 2 0 0 1 -1.8 -1" /><path d="M12 7v10" /></svg>
                         Ingresos
                     </button>
@@ -144,13 +156,13 @@
                     <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
                         <div class="py-4">
                             <table class="min-w-full divide-y divide-gray-200">
-                                <thead class="bg-gray-50">
+                                <thead class="bg-dark">
                                     <tr>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Descripción</th>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Monto</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Descripción</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Monto</th>
                                     </tr>
                                 </thead>
-                                <tbody id="ingressTableBody" class="bg-white divide-y divide-gray-200">
+                                <tbody id="ingressTableBody" class="bg-dark divide-y divide-gray-200">
                                     
                                 </tbody>
                             </table>
@@ -159,8 +171,8 @@
                 </div>
 
                 <!-- ACORDION DE HISTORIAL DE GASTOS -->
-                <div class="accordion-item">
-                    <button class="w-full text-left p-4 bg-white border border-gray-300 rounded-lg focus:outline-none flex items-center" onclick="toggleAccordion(this)">
+                <div class="accordion-item mt-4">
+                    <button class="w-full text-green bg-dark text-left p-4 border border-gray-300 rounded-lg focus:outline-none flex items-center" onclick="toggleAccordion(this)">
                         <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-coin-off mr-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14.8 9a2 2 0 0 0 -1.8 -1h-1m-2.82 1.171a2 2 0 0 0 1.82 2.829h1m2.824 2.822a2 2 0 0 1 -1.824 1.178h-2a2 2 0 0 1 -1.8 -1" /><path d="M20.042 16.045a9 9 0 0 0 -12.087 -12.087m-2.318 1.677a9 9 0 1 0 12.725 12.73" /><path d="M12 6v2m0 8v2" /><path d="M3 3l18 18" /></svg>
                         Gastos
                     </button>
@@ -168,13 +180,13 @@
                     <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
                         <div class="py-4">
                             <table class="min-w-full divide-y divide-gray-200">
-                                <thead class="bg-gray-50">
+                                <thead class="bg-dark">
                                     <tr>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Descripción</th>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Monto</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Descripción</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Monto</th>
                                     </tr>
                                 </thead>
-                                <tbody id="egressTableBody" class="bg-white divide-y divide-gray-200">
+                                <tbody id="egressTableBody" class="bg-dark divide-y divide-gray-200">
                                     
                                 </tbody>
                             </table>
